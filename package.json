@@ -45,6 +45,7 @@
         "clean": "rimraf ./dist ./test/generated ./test/e2e/generated ./samples/generated ./coverage ./node_modules/.cache",
         "build": "rollup --config --environment NODE_ENV:development",
         "build:watch": "rollup --config --environment NODE_ENV:development --watch",
+        "postinstall": "npm run build",
         "release": "rollup --config --environment NODE_ENV:production",
         "validate": "tsc --project tsconfig.json --noEmit",
         "run": "node ./test/index.js",
